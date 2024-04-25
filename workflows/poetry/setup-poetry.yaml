@@ -1,0 +1,19 @@
+name: Setup Poetry Env
+
+on:
+  workflow_call:
+
+jobs:
+
+  ru2-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install poetry
+        run: |
+          pip install poetry
+      - name: Install dependencies
+        run: |
+          poetry install
+      - name: Scream
+        run: |
+          echo "Poetry is installed"
