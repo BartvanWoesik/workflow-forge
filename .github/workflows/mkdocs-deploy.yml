@@ -1,4 +1,4 @@
-name: Setup Poetry Env
+name: mkdocs-deploy
 
 on:
   workflow_call:
