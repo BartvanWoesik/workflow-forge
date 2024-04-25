@@ -17,6 +17,9 @@ jobs:
       - name: Tell me what is in it
         run: |
           ls -la
+      - name: give python version
+        run: |
+          python --version
       - name: Install poetry
         run: |
           pip install poetry
