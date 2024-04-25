@@ -16,18 +16,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
-      - name: Tell me what is in it
-        run: |
-          ls -la
-      - name: give python version
-        run: |
-          python --version
+
       - name: Install poetry
         run: |
           pip install poetry
       - name: Install dependencies
         run: |
           poetry install
-      - name: Scream
+      - name: run mkdocs
         run: |
-          echo "Poetry is installed"
+          poetry run mkdocs gh-deploy --force
