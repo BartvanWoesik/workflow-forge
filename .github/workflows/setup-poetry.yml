@@ -8,6 +8,11 @@ jobs:
   ru2-job1:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Tell me what is in it
+        run: |
+          ls -la
       - name: Install poetry
         run: |
           pip install poetry
